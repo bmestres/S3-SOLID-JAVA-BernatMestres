@@ -1,7 +1,12 @@
 public class ServicePerson {
-    public void savePerson(Person person) {
-        MySql mysql = new MySql();
-        mysql.savePerson(person);
+
+    private DataBase dataBase;
+
+    public ServicePerson(DataBase currentDataBase){
+        this.dataBase = currentDataBase;
     }
 
+    public void savePerson(Person person) {
+        this.dataBase.savePerson(person);
+    }
 }

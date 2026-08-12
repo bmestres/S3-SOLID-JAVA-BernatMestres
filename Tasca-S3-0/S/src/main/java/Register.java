@@ -15,7 +15,6 @@ public class Register {
             boolean userConfirmed = true;
             if (!userConfirmed) {
                 System.out.println("⚠️ User did not confirm registration.");
-                return;
             }
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());

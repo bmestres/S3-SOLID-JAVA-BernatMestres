@@ -16,9 +16,7 @@ class UserInputsCheckTest {
     @ValueSource(strings = {"email_without_at_symbol.com", "notContains@anyDotCom"})
     void incorrectEMailsShouldThrowIllegalArgumentException(String invalidEmail) {
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            checker.checkInputs(invalidEmail, validPassword);
-        });
+        assertThrows(IllegalArgumentException.class, () -> checker.checkInputs(invalidEmail, validPassword));
     }
 
     @ParameterizedTest
@@ -26,9 +24,7 @@ class UserInputsCheckTest {
     @ValueSource(strings = {"Short!", "nocapitalletters@#%&"})
     void incorrectPasswordShouldThrowIllegalArgumentException(String invalidPassword) {
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            checker.checkInputs(validEmail, invalidPassword);
-        });
+        assertThrows(IllegalArgumentException.class, () -> checker.checkInputs(validEmail, invalidPassword));
     }
 
     @Test

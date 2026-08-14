@@ -6,12 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="I" />
-        <module name="D" />
-        <module name="L" />
-        <module name="tascaS109" />
-        <module name="O" />
+        <module name="solid-S" />
+        <module name="solid-D" />
+        <module name="solid-L" />
+        <module name="solid-O" />
+        <module name="solid-I" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="D" target="26" />
+      <module name="I" target="26" />
+      <module name="L" target="26" />
+      <module name="O" target="26" />
+      <module name="tascaS109" target="26" />
+    </bytecodeTargetLevel>
   </component>
 </project>

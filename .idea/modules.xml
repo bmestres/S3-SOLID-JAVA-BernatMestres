@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Tasca-S3-0/D/D.iml" filepath="$PROJECT_DIR$/Tasca-S3-0/D/D.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasca-S3-0/I/I.iml" filepath="$PROJECT_DIR$/Tasca-S3-0/I/I.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tasca-S3-0/L/L.iml" filepath="$PROJECT_DIR$/Tasca-S3-0/L/L.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasca-S3-0/O/O.iml" filepath="$PROJECT_DIR$/Tasca-S3-0/O/O.iml" />
     </modules>
   </component>
 </project>

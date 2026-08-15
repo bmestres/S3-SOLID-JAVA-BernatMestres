@@ -1,10 +1,5 @@
 public class Ghost extends Character {
-
-    public Ghost(String name){
-        super(name);
-    }
-    @Override
-    public void attack() {
-        System.out.println("The ghost casts a spooky spell.");
+    public Ghost(String type, AttackPolicy attackPolicy, DamagePolicy damagePolicy){
+        super(type, attackPolicy, damagePolicy);
     }
 }

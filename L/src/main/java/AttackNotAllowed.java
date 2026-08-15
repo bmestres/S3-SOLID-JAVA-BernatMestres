@@ -2,6 +2,6 @@
 public class AttackNotAllowed implements AttackPolicy {
     @Override
     public String attack(Character character) {
-        return String.format("The %s cannot attack", character.getType());
+        return String.format("The %s cannot attack!\n", character.getType());
     }
 }

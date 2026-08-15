@@ -4,6 +4,6 @@ public class ResistedDamage implements DamagePolicy {
     @Override
     public String takeDamage(Character character, int points) {
         int damageReceived = points / PROTECTION_FACTOR;
-        return String.format("The %s resists and only takes %d points of damage", character.getType(), damageReceived);
+        return String.format("The %s resists and only takes %d points of damage.\n", character.getType(), damageReceived);
     }
 }

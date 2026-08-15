@@ -1,5 +1,4 @@
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class GhostTest {
@@ -10,10 +9,11 @@ class GhostTest {
 
     @Test
     void attackOutcomeMustMatchExpected() {
-        assertEquals("The ghost casts a spooky spell.", testGhost.attack());
+        assertEquals("The ghost casts a spooky spell.\n", testGhost.attack());
     }
 
     @Test
     void takeDamageOutcomeMustMatchExpected() {
+        assertEquals("A ghost cannot take physical damage!\n", testGhost.takeDamage(6));
     }
 }

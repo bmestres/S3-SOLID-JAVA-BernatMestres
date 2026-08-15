@@ -21,11 +21,11 @@ public abstract class Character {
         return this.type;
     }
 
-    public void attack(){
-        this.attackPolicy.attack(this);
+    public String attack(){
+        return this.attackPolicy.attack(this);
     }
 
-    public void takeDamage(int points){
-        this.damagePolicy.takeDamage(this, points);
+    public String takeDamage(int points){
+        return this.damagePolicy.takeDamage(this, points);
     }
 }

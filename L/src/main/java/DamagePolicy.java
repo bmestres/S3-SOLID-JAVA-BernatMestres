@@ -1,3 +1,3 @@
 public interface DamagePolicy {
-    public void takeDamage(Character character, int points);
+    public String takeDamage(Character character, int points);
 }

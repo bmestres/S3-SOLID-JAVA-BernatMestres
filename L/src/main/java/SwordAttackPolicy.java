@@ -1,6 +1,6 @@
 public class SwordAttackPolicy implements AttackPolicy{
     @Override
-    public void attack(Character character) {
-        System.out.format("The %s strikes with a sword.", character.getType());
+    public String attack(Character character) {
+        return String.format("The %s strikes with a sword.", character.getType());
     }
 }

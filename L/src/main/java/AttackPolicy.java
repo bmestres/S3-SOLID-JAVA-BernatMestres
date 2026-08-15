@@ -1,3 +1,3 @@
 public interface AttackPolicy {
-    public void attack(Character character);
+    public String attack(Character character);
 }

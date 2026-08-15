@@ -1,5 +1,5 @@
 public class Ghost extends Character {
-    public Ghost(String type, AttackPolicy attackPolicy, DamagePolicy damagePolicy){
-        super(type, attackPolicy, damagePolicy);
+    public Ghost(AttackPolicy attackPolicy, DamagePolicy damagePolicy){
+        super("ghost", attackPolicy, damagePolicy);
     }
 }

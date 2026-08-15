@@ -1,6 +1,5 @@
 /* Kept the DefaultDamage policy from the original code, even if Character is made abstract,
-in case it's required.
- */
+in case it's required. */
 public class DefaultDamage implements DamagePolicy {
     @Override
     public void takeDamage(Character character, int points) {

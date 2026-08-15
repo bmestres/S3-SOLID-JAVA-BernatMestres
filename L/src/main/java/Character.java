@@ -3,7 +3,7 @@ public abstract class Character {
     private AttackPolicy attackPolicy;
     private DamagePolicy damagePolicy;
 
-    public Character(String type, AttackPolicy attackPolicy, DamagePolicy damagePolicy) {
+    protected Character(String type, AttackPolicy attackPolicy, DamagePolicy damagePolicy) {
         this.type = type;
         this.attackPolicy = attackPolicy;
         this.damagePolicy = damagePolicy;

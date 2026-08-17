@@ -17,7 +17,11 @@ mvn clean compile
 mvn test
 ```
 🧠 **Explanation:**<br>
-The original
+The original User class has been released from logic and left uniquely as a data structure. 
+Additionally, the input validation has been separated to a UserInputsCheck class. Turned the Notification
+strategy into an interface with implementations, such as EmailService, that can be extended in the future.
+
+
 
 
 

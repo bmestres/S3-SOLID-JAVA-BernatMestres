@@ -1,6 +1,6 @@
 public class Guitar implements Playable{
     @Override
-    public void play(){
-        System.out.println("🎸 Strumming the guitar");
+    public String play(){
+        return "🎸 Strumming the guitar";
     }
 }

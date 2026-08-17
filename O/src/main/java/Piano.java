@@ -1,6 +1,6 @@
 public class Piano implements Playable{
     @Override
-    public void play(){
-        System.out.println("🎹 Playing the piano");
+    public String play(){
+        return "🎹 Playing the piano";
     }
 }

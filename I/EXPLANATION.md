@@ -1,4 +1,4 @@
-## I (Interface Segragation)
+## I (Interface Sagragation)
 
 🗒️ **Description**:<br>
 This project applies ISP to refactor given code to manage several electrodomestic functions.
@@ -21,7 +21,7 @@ classes from having to provide an implementation for each machine functionality.
 MachineActions interface is kept with on/off methods which are common in all
 machines.
 
-
+🌳 **Project structure:**
 ````
 I
 ├── EXPLANATION.md

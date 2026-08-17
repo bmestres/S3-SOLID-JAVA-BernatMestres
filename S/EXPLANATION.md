@@ -18,7 +18,7 @@ mvn test
 ```
 🧠 **Explanation:**<br>
 The original User class has been released from logic and left uniquely as a data structure. 
-Additionally, the input validation has been separated to a UserInputsCheck class. Turned the Notification
+Additionally, the input validation has been separated to a EmailUserInputsCheck class. Turned the Notification
 strategy into an interface with implementations, such as EmailService, that can be extended in the future.
 
 
@@ -39,11 +39,11 @@ S
     │   │   ├── NotificationService.java
     │   │   ├── Register.java
     │   │   ├── User.java
-    │   │   └── UserInputsCheck.java
+    │   │   └── EmailUserInputsCheck.java
     │   └── resources
     └── test
         ├── java
         │   ├── RegisterTest.java
-        │   └── UserInputsCheckTest.java
+        │   └── EmailUserInputsCheckTest.java
         └── resources
 ```

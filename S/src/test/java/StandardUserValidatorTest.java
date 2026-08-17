@@ -1,13 +1,18 @@
 import org.junit.jupiter.api.Test;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class UserInputsCheckTest {
+import static org.junit.jupiter.api.Assertions.*;
 
-    UserInputsCheck checker = new UserInputsCheck();
+class StandardUserValidatorTest {
+
+    UserValidator validator = new StandardUserValidator();
+
+    String validName = "TestUser";
     String validEmail = "valid@email.com";
     String validPassword = "ThisPasswordIsValid";
 
@@ -16,7 +21,8 @@ class UserInputsCheckTest {
     @ValueSource(strings = {"email_without_at_symbol.com", "notContains@anyDotCom"})
     void incorrectEMailsShouldThrowIllegalArgumentException(String invalidEmail) {
 
-        assertThrows(IllegalArgumentException.class, () -> checker.checkInputs(invalidEmail, validPassword));
+        User testUser = new User(validName, invalidEmail, validPassword);
+        assertThrows(IllegalArgumentException.class, () -> validator.validate(testUser));
     }
 
     @ParameterizedTest
@@ -24,11 +30,13 @@ class UserInputsCheckTest {
     @ValueSource(strings = {"Short!", "nocapitalletters@#%&"})
     void incorrectPasswordShouldThrowIllegalArgumentException(String invalidPassword) {
 
-        assertThrows(IllegalArgumentException.class, () -> checker.checkInputs(validEmail, invalidPassword));
+        User testUser = new User(validName, validEmail, invalidPassword);
+        assertThrows(IllegalArgumentException.class, () -> validator.validate(testUser));
     }
 
     @Test
     void correctEmailAndPasswordShouldNotThrowAnException() {
-        assertDoesNotThrow(() -> checker.checkInputs(validEmail, validPassword));
+        User testUser = new User(validName, validEmail, validPassword);
+        assertDoesNotThrow(() -> validator.validate(testUser));
     }
 }

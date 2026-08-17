@@ -1,15 +1,15 @@
 public class Register {
-    private final UserInputsCheck inputsChecker;
+    private final UserValidator userValidator;
     private final NotificationService notificationService;
 
-    public Register(UserInputsCheck inputsChecker, EMailService emailService) {
-        this.inputsChecker = inputsChecker;
-        this.notificationService = emailService;
+    public Register(UserValidator userValidator, NotificationService notificationService) {
+        this.userValidator = userValidator;
+        this.notificationService = notificationService;
     }
 
     public void registerUser(User potentialUser) {
         try {
-            this.inputsChecker.checkInputs(potentialUser.getEmail(), potentialUser.getPassword());
+            this.userValidator.validate(potentialUser);
             this.notificationService.sendConfirmation(potentialUser.getEmail());
 
             boolean userConfirmed = true;

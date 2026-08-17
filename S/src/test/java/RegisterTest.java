@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -5,30 +6,34 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.Mockito.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
 class RegisterTest {
 
     @Mock
-    UserInputsCheck checker;
+    UserValidator validator;
 
     @Mock
-    EMailService service;
+    NotificationService service;
 
-    @InjectMocks
     Register register;
+
+    @BeforeEach
+    void setUp(){
+        register = new Register(validator, service);
+    }
 
     @Test
     void correctEmailAndPasswordShouldCallService() {
         String name = "Alf";
         String validEmail = "valid@email.com";
         String validPassword = "ThisPasswordIsValid";
-        User user = new User(name, validEmail, validPassword);
 
-        register.registerUser(user);
+        User testUser = new User(name, validEmail, validPassword);
 
-        verify(checker, times(1)).checkInputs(validEmail, validPassword);
+        register.registerUser(testUser);
+
+        verify(validator, times(1)).validate(testUser);
         verify(service, times(1)).sendConfirmation(validEmail);
     }
 }

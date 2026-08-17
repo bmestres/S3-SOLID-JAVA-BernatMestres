@@ -16,15 +16,14 @@ mvn clean compile
 mvn test
 ```
 🧠 **Explanation:**<br><br>
-The original User class has been released from logic and left uniquely as a data structure.
-Additionally, the input validation has been separated to a EmailUserInputsCheck class. <br><br>
-Turned the Notification system into an interface with implementations, such as EmailService, that can be extended in the future.
-Validation has also been turned into an interface with StandardUserValidator as one implementation, to allow
-for other future implementations.<br><br>
-Finally, Register class has a UserValidator and a NotificationService to perform the actual registration.
+Instruments are made implementations of the new interface Playable. Given that
+none of the instruments have any attributes they are kept as functional objects
+performing one sole method: play(). <br><br>
+Extracting the functionality to an interface allows for more flexibility than the
+original if-else structure.
 
 
-
+🌳 **Project structure:**
 ```
 D
 ├── D.iml

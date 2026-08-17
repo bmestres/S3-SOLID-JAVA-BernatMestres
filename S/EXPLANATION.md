@@ -23,7 +23,7 @@ for other future implementations.<br><br>
 Finally, Register class has a UserValidator and a NotificationService to perform the actual registration.
 
 
-#### 🧩 Project structure:
+#### 🌳 Project structure:
 
 ``` text
 S
